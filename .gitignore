@@ -2,7 +2,7 @@
 bundle.js
 npm-debug.log
 .DS_Store
-HowStateWorks
+HowStateWorks.md
 # IntelliJ
 *.iml
 /.idea

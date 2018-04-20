@@ -10,11 +10,11 @@ import Searchbar from './components/search_bar';
 //Take this component's generated HTML and put it on the page (in the DOM)
 
 const App = () => {
-  return  (
-    <div>
-      <Searchbar />
-    </div>
-  );
+   return (
+      <div>
+         <Searchbar />
+      </div>
+   );
 }
 
 ReactDOM.render(<App />, document.querySelector('.container'))
