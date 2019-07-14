@@ -1,0 +1,1 @@
+It's is highly recommended that all data loading be completed in the componentDidMount() method.
