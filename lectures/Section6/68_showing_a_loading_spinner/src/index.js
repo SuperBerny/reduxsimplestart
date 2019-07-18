@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends React.Component {
-   
-   constructor(props) {
-      super(props); 
+import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
-      //Now the constructor function's only job is to create a state object.
-      // This will be refactored in the next lecture
-      this.state = { lat: null, errorMessage: '' };      
-   }
+class App extends React.Component {
+
+   state = { lat: null, errorMessage: '' };
 
    componentDidMount() {
       window.navigator.geolocation.getCurrentPosition(
@@ -25,10 +22,10 @@ class App extends React.Component {
       }
 
       if (!this.state.errorMessage && this.state.lat) {
-         return <div>Lattitude: {this.state.lat}</div>
+         return <SeasonDisplay lat={this.state.lat}/>
       }
 
-      return <div>Loading!</div>;
+      return <Spinner/>
    }
 }
 
